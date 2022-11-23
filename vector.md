@@ -2,21 +2,21 @@
 
 <h3>Vektorlar dinamik massivlar bilan bir xil bo'lib, element kiritilganda yoki o'chirilganda avtomatik ravishda o'lchamini o'zgartirish qobiliyatiga ega, ularni saqlash konteyner tomonidan avtomatik ravishda amalga oshiriladi. Vektor elementlari qo'shni xotiraga joylashtiriladi, shunda ularga kirish va iteratorlar yordamida o'tish mumkin. Vektorlarda ma'lumotlar oxirida kiritiladi. Oxirida kiritish differensial vaqtni oladi, chunki ba'zida massivni kengaytirish kerak bo'lishi mumkin. Oxirgi elementni olib tashlash faqat doimiy vaqtni oladi, chunki hech qanday o'lcham o'zgarmaydi. Boshida yoki o'rtasida kiritish va o'chirish vaqt bo'yicha chiziqli.</h3>
 
--   **begin() **- vektordagi birinchi elementga ishora qiluvchi iteratorni qaytaradi
+-   **begin()**- vektordagi birinchi elementga ishora qiluvchi iteratorni qaytaradi
 
--   **end() **- vektordagi oxirgi elementdan keyingi nazariy elementga ishora qiluvchi iteratorni qaytaradi
+-   **end()**- vektordagi oxirgi elementdan keyingi nazariy elementga ishora qiluvchi iteratorni qaytaradi
 
--   **rbegin() **- vektordagi oxirgi elementga ishora qiluvchi teskari iteratorni qaytaradi (teskari boshlanish). U < oxirgi elementdan birinchi elementga o'tadi
+-   **rbegin()**- vektordagi oxirgi elementga ishora qiluvchi teskari iteratorni qaytaradi (teskari boshlanish). U < oxirgi elementdan birinchi elementga o'tadi
 
--   **rend() **- vektordagi birinchi elementdan oldingi nazariy elementga ishora qiluvchi teskari iteratorni qaytaradi < (teskari uchi deb hisoblanadi)
+-   **rend()**- vektordagi birinchi elementdan oldingi nazariy elementga ishora qiluvchi teskari iteratorni qaytaradi < (teskari uchi deb hisoblanadi)
 
--   **cbegin() **- vektordagi birinchi elementga ishora qiluvchi doimiy iteratorni qaytaradi.
+-   **cbegin()**- vektordagi birinchi elementga ishora qiluvchi doimiy iteratorni qaytaradi.
 
 -   **cend()** - vektordagi oxirgi elementdan keyingi nazariy elementga ishora qiluvchi doimiy iteratorni qaytaradi.
 
 -   **crbegin()** - vektordagi oxirgi elementga ishora qiluvchi doimiy teskari iteratorni qaytaradi (teskari < boshlanish). U oxirgi elementdan birinchi elementga o'tadi
 
--   **crend()** - vektordagi birinchi elementdan oldingi nazariy elementga ishora qiluvchi doimiy teskari iteratorni < qaytaradi (teskari uchi deb hisoblanadi)
+-   \***\*crend()** - vektordagi birinchi elementdan oldingi nazariy elementga ishora qiluvchi doimiy teskari iteratorni < qaytaradi (teskari uchi deb hisoblanadi)
 
 ## O'lcham
 
@@ -25,7 +25,6 @@
 -   **max_size()** - vektor ushlab turadigan maksimal elementlar sonini qaytaradi.
 
 -   **capacity()** - Elementlar soni sifatida ifodalangan vektorga hozirda ajratilgan saqlash maydoni hajmini qaytaradi.
-
 -   **resize(n)** - konteyner hajmini "n" elementlarni o'z ichiga oladigan qilib o'zgartiradi.
 
 -   **empty()** - konteyner bo'sh yoki yo'qligini qaytaradi.
