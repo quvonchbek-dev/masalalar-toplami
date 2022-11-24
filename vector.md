@@ -6,33 +6,6 @@
 
 -   **begin()**- vektordagi birinchi elementga ishora qiluvchi iteratorni qaytaradi
 
-```
-#include <iostream>
-#include <vector>
-
-using namespace std;
-int main(){
-	vector<int> v = {1, 5, 2, 6, 8};
-
-	cout << "Vektorning elementlari oddiy iterator bilan: ";
-	for(int i=0; i<v.size(); i++){
-		cout << v[i] << ' ';
-	}
-
-	cout << "\nbegin() va end() iteratorlari bilan: ";
-	for(auto i=v.begin(); i < v.end(); i++){
-		cout << *i << " ";
-	}
-
-	cout << "\nrbegin() va rend() iteratorlari bilan: ";
-	for(auto i=v.rbegin(); i < v.rend(); i++){
-		cout << *i << " ";
-	}
-	return 0;
-}
-
-```
-
 -   **end()**- vektordagi oxirgi elementdan keyingi nazariy elementga ishora qiluvchi iteratorni qaytaradi
 
 -   **rbegin()**- vektordagi oxirgi elementga ishora qiluvchi teskari iteratorni qaytaradi (teskari boshlanish). U < oxirgi elementdan birinchi elementga o'tadi
@@ -47,13 +20,44 @@ int main(){
 
 -   **crend()** - vektordagi birinchi elementdan oldingi nazariy elementga ishora qiluvchi doimiy teskari iteratorni < qaytaradi (teskari uchi deb hisoblanadi)
 
-## O'lcham
+## Misol:
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+int main() {
+    vector<int> v = { 1, 5, 2, 6, 8 };
+
+    cout << "Vektor elementlari oddiy iterator bilan: ";
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << ' ';
+    }
+
+    cout << "\nbegin() va end() iteratorlari bilan: ";
+    for (auto i = v.begin(); i < v.end(); i++) {
+        cout << *i << " ";
+    }
+
+    cout << "\nrbegin() va rend() iteratorlari bilan: ";
+    for (auto i = v.rbegin(); i < v.rend(); i++) {
+        cout << *i << " ";
+    }
+    return 0;
+}
+```
+
+---
+
+# O'lcham funksiyalari
 
 -   **size()** - vektordagi elementlar sonini qaytaradi.
 
 -   **max_size()** - vektor ushlab turadigan maksimal elementlar sonini qaytaradi.
 
 -   **capacity()** - Elementlar soni sifatida ifodalangan vektorga hozirda ajratilgan saqlash maydoni hajmini qaytaradi.
+
 -   **resize(n)** - konteyner hajmini "n" elementlarni o'z ichiga oladigan qilib o'zgartiradi.
 
 -   **empty()** - konteyner bo'sh yoki yo'qligini qaytaradi.
@@ -62,7 +66,35 @@ int main(){
 
 -   **reserve()** - vektor sig'imi kamida n ta elementni o'z ichiga olishi uchun etarli bo'lishini so'raydi.
 
-## Modifikatorlar
+## Misollar
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+int main() {
+    vector<int> v = { 1, 5, 2, 6, 8, 10, 3, 22 };
+
+    cout << "Vektorning elementlari: ";
+    for (auto x : v) cout << x << " ";
+
+    cout << "\nVektorning elementlari soni: ";
+    cout << v.size();
+
+    cout << "\nKonteyner hajmini o'zgartirdik: ";
+    v.resize(6);
+    for (auto x : v) cout << x << " ";
+
+    cout << "\nempty() bilan tekshiramiz: ";
+    cout << (v.empty() ? "Bo'sh" : "ELementlari bor");
+    return 0;
+}
+```
+
+---
+
+# Modifikatorlar
 
 -   **assign()** - eskilarini almashtirish orqali vektor elementlariga yangi qiymat beradi
 
