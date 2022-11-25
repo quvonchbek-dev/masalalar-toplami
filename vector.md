@@ -110,6 +110,6 @@ int main() {
 
 -   **clear()** - vektor konteynerining barcha elementlarini olib tashlash uchun ishlatiladi
 
--   **emplace()** - Bu joyga yangi element kiritish orqali konteynerni kengaytiradi
++   **emplace()** - Bu joyga yangi element kiritish orqali konteynerni kengaytiradi
 
--   **emplace_back()** - vektor konteyneriga yangi element kiritish uchun ishlatiladi, yangi element vektor oxiriga qo'shiladi.
++   **emplace_back()** - vektor konteyneriga yangi element kiritish uchun ishlatiladi, yangi element vektor oxiriga qo'shiladi.
