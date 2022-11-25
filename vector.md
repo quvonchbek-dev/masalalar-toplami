@@ -113,3 +113,61 @@ int main() {
 +   **emplace()** - Bu joyga yangi element kiritish orqali konteynerni kengaytiradi
 
 +   **emplace_back()** - vektor konteyneriga yangi element kiritish uchun ishlatiladi, yangi element vektor oxiriga qo'shiladi.
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void print_v(vector<int>& vec) {
+    for (auto i = vec.begin(); i < vec.end(); i++) {
+        cout << *i << " ";
+    }
+}
+int main() {
+    vector<int> v = { 1, 5, 2, 6, 8 };
+    v.push_back(2);
+    v.push_back(10);
+    cout << "push_back() yordamida v ga 2 ta element qo'shildi: ";
+    print_v(v);
+
+    v.pop_back();
+    v.pop_back();
+    v.pop_back();
+    cout << "\n\npop_back() yordamida v ning 3 ta elementi o'chirildi: ";
+    print_v(v);
+
+    v.insert(v.begin() + 3, 55);
+    v.insert(v.begin(), 55);
+    cout << "\n\ninsert() yordamida v ga 2 ta element qo'shdik: ";
+    print_v(v);
+
+    v.erase(v.begin() + 3);
+    v.erase(v.begin());
+    cout << "\n\nerase() yordamida v dan 2 ta elementni o'chirdik: ";
+    print_v(v);
+
+    vector<int> v2 = { 2, 4, 6, 8, 10 };
+    v.swap(v2);
+    cout << "\n\nv ning qiymatlarini v2 bilan almashtirdi:\n";
+    cout << "v: "; print_v(v);
+    cout << "\nv2: "; print_v(v2);
+
+    v.emplace(v.begin() + 1, 22);
+    cout << "\n\nv ga 1-indeksga bitta element qo'shdik: ";
+    print_v(v);
+
+    v.emplace_back(33);
+    cout << "\n\nv ga oxiridan bitta element qo'shdik: ";
+    print_v(v);
+
+    v.assign(10, 1);
+    cout << "\n\nassign() yordamida v ning elementlari\no'chirilib, o'rniga 10 ta 1 yozildi: ";
+    print_v(v);
+
+    cout << "\n\n...clear() yordamida vektor elementlari tozalandi";
+    v.clear();
+    cout << "\nvektor elementlari soni: " << v.size() << endl;
+    cout << (v.empty() ? "Bo'sh" : "Elementlar bor");
+    return 0;
+}```
