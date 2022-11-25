@@ -170,4 +170,5 @@ int main() {
     cout << "\nvektor elementlari soni: " << v.size() << endl;
     cout << (v.empty() ? "Bo'sh" : "Elementlar bor");
     return 0;
-}```
+}
+```
