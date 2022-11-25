@@ -113,6 +113,9 @@ int main() {
 +   **emplace()** - Bu joyga yangi element kiritish orqali konteynerni kengaytiradi
 
 +   **emplace_back()** - vektor konteyneriga yangi element kiritish uchun ishlatiladi, yangi element vektor oxiriga qo'shiladi.
+
+## Misollar
+
 ```cpp
 #include <iostream>
 #include <vector>
